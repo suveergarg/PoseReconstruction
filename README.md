@@ -58,9 +58,9 @@ As mentioned previously, we are also interested in predicting ordinal depth for 
  
 #### Losses
 
-For these networks, we use rank loss for ordinal depth prediction and heatmap loss for planar joint coordinate prediction. When used simultaneously, as seen in our first implementation, these components are scaled to a similar magnitude (![](images/loss3.png))[5]
+For these networks, we use rank loss for ordinal depth prediction and heatmap loss for planar joint coordinate prediction. When used simultaneously, as seen in our first implementation, these components are scaled to a similar magnitude ![](images/loss3.png)
 
-The rank loss definition shown here is used to maximize the difference in depth estimate between joints that are not on the same plane (target relation +/- 1) and minimize the difference in depth estimate of joints marked roughly in-plane (target relation 0).  
+The rank loss definition shown here is used to maximize the difference in depth estimate between joints that are not on the same plane (target relation +/- 1) and minimize the difference in depth estimate of joints marked roughly in-plane (target relation 0). 
 
 ![](images/l1.png)
 
@@ -76,8 +76,11 @@ Where w_n and w_n_hat are the ground truth and the predicted heat maps respectiv
 
 
 Optimizer: Adam 
+
 Learning Rate: 2.5e-4
+
 Epochs: 145
+
 No of Hourglass Networks: 1
 
  
@@ -129,9 +132,13 @@ In conclusion, we learned about the different available datasets for Pose Recons
 ### References
 
 [1] Newell, Alejandro, Kaiyu Yang, and Jia Deng. "Stacked hourglass networks for human pose estimation." European conference on computer vision. Springer, Cham, 2016.
+
 [2] Mehta, Dushyant, et al. "Monocular 3d human pose estimation in the wild using improved cnn supervision." 2017 international conference on 3D vision (3DV). IEEE, 2017
+
 [3] Mehta, Dushyant, et al. "Vnect: Real-time 3d human pose estimation with a single rgb camera." ACM Transactions on Graphics (TOG) 36.4 (2017): 1-14.
+
 [4] Pavlakos, Georgios, et al. "Learning to estimate 3D human pose and shape from a single color image." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018.
+
 [5] Pavlakos, Georgios, Xiaowei Zhou, and Kostas Daniilidis. "Ordinal depth supervision for 3d human pose estimation." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018.
 
 
